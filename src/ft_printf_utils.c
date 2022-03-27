@@ -6,7 +6,7 @@
 /*   By: mbugday <mbugday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:37:00 by mbugday           #+#    #+#             */
-/*   Updated: 2022/03/27 03:29:39 by mbugday          ###   ########.fr       */
+/*   Updated: 2022/03/27 09:51:07 by mbugday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 		nb *= -1;
 		dgt++;
 	}
-	nstr = (char *)malloc(sizeof(char) * (dgt + 1));
+	nstr = malloc(sizeof(char) * (dgt + 1));
 	if (!nstr)
 		return (NULL);
 	nstr[dgt] = '\0';
@@ -52,9 +52,4 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		nstr[0] = '-';
 	return (nstr);
-}
-
-void	ft_putchar_fd(char x, int fd)
-{
-	write(fd, &x, 1);
 }

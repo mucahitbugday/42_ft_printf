@@ -6,7 +6,7 @@
 /*   By: mbugday <mbugday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:33:47 by mbugday           #+#    #+#             */
-/*   Updated: 2022/03/21 14:33:52 by mbugday          ###   ########.fr       */
+/*   Updated: 2022/03/27 09:52:58 by mbugday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_printf(const char *str, ...)
 			i++;
 		}
 		else
-			print_length += ft_print_char(str[i]);
+			print_length += ft_is_c(str[i]);
 		i++;
 	}
 	va_end(args);

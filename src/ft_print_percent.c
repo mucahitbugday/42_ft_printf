@@ -6,14 +6,14 @@
 /*   By: mbugday <mbugday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:36:09 by mbugday           #+#    #+#             */
-/*   Updated: 2022/03/21 14:36:13 by mbugday          ###   ########.fr       */
+/*   Updated: 2022/03/27 09:56:06 by mbugday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-int	ft_print_percent(void)
+int	ft_is_per(void)
 {
-	write(1, "%", 1);
+	ft_is_c('%');
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: mbugday <mbugday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:35:20 by mbugday           #+#    #+#             */
-/*   Updated: 2022/03/21 14:35:51 by mbugday          ###   ########.fr       */
+/*   Updated: 2022/03/27 09:55:12 by mbugday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,21 @@ void	ft_put_hex(unsigned int num, const char format)
 	else
 	{
 		if (num <= 9)
-			ft_putchar_fd((num + '0'), 1);
+			ft_is_c(num + '0');
 		else
 		{
 			if (format == 'x')
-				ft_putchar_fd((num - 10 + 'a'), 1);
+				ft_is_c(num - 10 + 'a');
 			if (format == 'X')
-				ft_putchar_fd((num - 10 + 'A'), 1);
+				ft_is_c(num - 10 + 'A');
 		}
 	}
 }
 
-int	ft_print_hex(unsigned int num, const char format)
+int	ft_is_x(unsigned int num, const char format)
 {
 	if (num == 0)
-		return (write(1, "0", 1));
+		return (ft_is_c('0'));
 	else
 		ft_put_hex(num, format);
 	return (ft_hex_len(num));

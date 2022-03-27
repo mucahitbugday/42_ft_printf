@@ -6,7 +6,7 @@
 /*   By: mbugday <mbugday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:36:17 by mbugday           #+#    #+#             */
-/*   Updated: 2022/03/27 02:53:04 by mbugday          ###   ########.fr       */
+/*   Updated: 2022/03/27 09:56:49 by mbugday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,24 +35,24 @@ void	ft_put_ptr(unsigned long num)
 	else
 	{
 		if (num <= 9)
-			ft_putchar_fd((num + '0'), 1);
+			ft_is_c(num + '0');
 		else
-			ft_putchar_fd((num - 10 + 'a'), 1);
+			ft_is_c(num - 10 + 'a');
 	}
 }
 
-int	ft_print_ptr(unsigned long ptr)
+int	ft_is_p(unsigned long ptr)
 {
-	int	print_length;
+	int	len;
 
-	print_length = 0;
-	print_length += write(1, "0x", 2);
+	len = 0;
+	len += ft_is_s("0x");
 	if (ptr == 0)
-		print_length += write(1, "0", 1);
+		len += ft_is_c('0');
 	else
 	{
 		ft_put_ptr(ptr);
-		print_length += ft_ptr_len(ptr);
+		len += ft_ptr_len(ptr);
 	}
-	return (print_length);
+	return (len);
 }

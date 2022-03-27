@@ -6,7 +6,7 @@
 /*   By: mbugday <mbugday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:36:50 by mbugday           #+#    #+#             */
-/*   Updated: 2022/03/21 14:36:54 by mbugday          ###   ########.fr       */
+/*   Updated: 2022/03/27 09:57:48 by mbugday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_uitoa(unsigned int n)
 	int		len;
 
 	len = ft_num_len(n);
-	num = (char *)malloc(sizeof(char) * (len + 1));
+	num = malloc(sizeof(char) * (len + 1));
 	if (!num)
 		return (0);
 	num[len] = '\0';
@@ -44,7 +44,7 @@ char	*ft_uitoa(unsigned int n)
 	return (num);
 }
 
-int	ft_print_unsigned(unsigned int n)
+int	ft_is_u(unsigned int n)
 {
 	int		print_length;
 	char	*num;
@@ -55,7 +55,7 @@ int	ft_print_unsigned(unsigned int n)
 	else
 	{
 		num = ft_uitoa(n);
-		print_length += ft_print_str(num);
+		print_length += ft_is_s(num);
 		free(num);
 	}
 	return (print_length);
