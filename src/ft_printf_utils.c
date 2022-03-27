@@ -6,15 +6,15 @@
 /*   By: mbugday <mbugday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:37:00 by mbugday           #+#    #+#             */
-/*   Updated: 2022/03/27 09:51:07 by mbugday          ###   ########.fr       */
+/*   Updated: 2022/03/27 10:20:41 by mbugday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-static size_t	ft_get_digit(int n)
+static int	ft_get_digit(int n)
 {
-	size_t	count;
+	int	count;
 
 	count = 0;
 	if (n == 0)
@@ -30,7 +30,7 @@ static size_t	ft_get_digit(int n)
 char	*ft_itoa(int n)
 {
 	char		*nstr;
-	size_t		dgt;
+	int		dgt;
 	long int	nb;
 
 	nb = n;

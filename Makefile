@@ -39,9 +39,6 @@ clean:
 fclean: clean
 	${RM} ${NAME}
 	@echo "$(GREEN)<<< FCLEAN FINISH >>>$(DEF_COLOR)"
-	
-
-
 re: fclean all
 
 .PHONY: all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: mbugday <mbugday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:36:50 by mbugday           #+#    #+#             */
-/*   Updated: 2022/03/27 09:57:48 by mbugday          ###   ########.fr       */
+/*   Updated: 2022/03/27 10:17:59 by mbugday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_uitoa(unsigned int n)
 	num[len] = '\0';
 	while (n != 0)
 	{
-		num[len - 1] = n % 10 + 48;
+		num[len - 1] = n % 10 + '0';
 		n = n / 10;
 		len--;
 	}
