@@ -6,7 +6,7 @@
 /*   By: mbugday <mbugday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:37:00 by mbugday           #+#    #+#             */
-/*   Updated: 2022/03/27 03:14:58 by mbugday          ###   ########.fr       */
+/*   Updated: 2022/03/27 03:29:39 by mbugday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	*ft_itoa(int n)
 	return (nstr);
 }
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char x, int fd)
 {
-	write(fd, &c, 1);
+	write(fd, &x, 1);
 }
