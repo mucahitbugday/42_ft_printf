@@ -6,7 +6,7 @@
 /*   By: mbugday <mbugday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:37:00 by mbugday           #+#    #+#             */
-/*   Updated: 2022/03/27 10:20:41 by mbugday          ###   ########.fr       */
+/*   Updated: 2022/04/12 00:54:53 by mbugday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	ft_get_digit(int n)
 char	*ft_itoa(int n)
 {
 	char		*nstr;
-	int		dgt;
+	int			dgt;
 	long int	nb;
 
 	nb = n;
